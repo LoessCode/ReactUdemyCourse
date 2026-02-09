@@ -1,4 +1,4 @@
-import "../styles/card.css"
+import "../../styles/landingpage/card.css"
 
 interface CardProps
 {

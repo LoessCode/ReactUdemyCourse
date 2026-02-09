@@ -1,16 +1,16 @@
-import "../styles/card.css"
+import "../../styles/landingpage/card.css"
 
 
 import Card from "./Card.tsx";
+import {CARD_CONTENT} from "../../data/landingpage/CardContainer.ts";
+
 
 function CardContainer()
 {
   return (
     <>
       <div className="cardContainer">
-        <Card txt="This is a card"/>
-        <Card txt="This is the second card" />
-        <Card txt="This is the third card"/>
+        {CARD_CONTENT.map(card => (<Card txt = {card} />))}
       </div>
     </>
   );
