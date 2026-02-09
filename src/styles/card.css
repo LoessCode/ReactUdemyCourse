@@ -1,0 +1,16 @@
+.cardContainer
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+}
+
+.cardCustom
+{
+    padding: 2vh 2vw;
+
+    width: 10vw;
+    height: 15vw;
+    background: #213547;
+    border-radius: 15px;
+}

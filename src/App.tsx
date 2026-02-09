@@ -3,35 +3,10 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./styles/App.css";
 
+import CardContainer from "./components/CardContainer.tsx";
 
-interface CardProps
-{
-  txt?: string;
-}
 
-function Card({txt}: CardProps)
-{
-  return (
-    <>
-      <div className="cardCustom">
-        {txt}
-      </div>
-    </>
-  );
-}
 
-function CardContainer()
-{
-  return (
-    <>
-      <div className="cardContainer">
-        <Card txt="This is a card"/>
-        <Card txt="This is the second card" />
-        <Card txt="This is the third card"/>
-      </div>
-    </>
-  );
-}
 
 function App()
 {
