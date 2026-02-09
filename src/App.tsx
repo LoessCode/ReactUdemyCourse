@@ -1,21 +1,15 @@
 import "./styles/landingpage/App.css";
 
-import CardContainer from "./components/landingpage/CardContainer.tsx";
-import FeatureScroll from "./components/landingpage/FeatureScroll.tsx";
-import CountingDemo from "./components/landingpage/CountingDemo.tsx";
+
+// import LandingPage from "./components/landingpage/LandingPage.tsx";
+import TicTacToe from "./components/tictactoe/TicTacToe.tsx";
 
 function App()
 {
-
-
-
   return (
     <main>
-      <CountingDemo />
-
-      <CardContainer/>
-
-      <FeatureScroll/>
+      {/*<LandingPage />*/}
+      <TicTacToe/>
     </main>
   );
 }

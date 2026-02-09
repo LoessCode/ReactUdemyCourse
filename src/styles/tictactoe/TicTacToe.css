@@ -1,0 +1,60 @@
+.game-container
+{
+    justify-self: center;
+
+    width: 30rem;
+    height: 30rem;
+
+    background: #242424;
+
+    border-radius: 3rem;
+
+    box-shadow: inset 0.6rem 0.6rem 2rem #141414,
+    inset -0.6rem -0.6rem 2rem #343434;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.game-square
+{
+    width: 7rem;
+    height: 7rem;
+
+    margin: 1.5rem;
+
+    border-radius: 50%;
+}
+
+/*
+#3a4fbb
+#5677ff
+
+#bb3a3a
+#ff5656
+ */
+
+.Z
+{
+    background: linear-gradient(145deg, #494949, #171717);
+
+    box-shadow:  0.4rem 0.4rem 0.5rem #141414,
+    -0.4rem -0.4rem 0.5rem #343434;
+}
+
+.X
+{
+    background: linear-gradient(145deg, #5f77ea, #181e3d);
+
+    box-shadow:  0.4rem 0.4rem 0.5rem #141414,
+    -0.4rem -0.4rem 0.5rem #343434;
+}
+
+.O
+{
+    background: linear-gradient(145deg, #d05858, #381818);
+
+    box-shadow:  0.4rem 0.4rem 0.5rem #141414,
+    -0.4rem -0.4rem 0.5rem #343434;
+}
