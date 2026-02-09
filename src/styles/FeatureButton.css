@@ -37,10 +37,28 @@
     text-align: left;
 }
 
-li.feature-button
+li.feature-scroll
 {
     width: 100%;
 
     padding: 0;
     margin: 0;
+}
+
+.feature-scroll button:focus {
+    outline: none;
+}
+
+.feature-scroll button.feature-button-active
+{
+    border-color: #535bf2;
+}
+
+.feature-scroll button.feature-button-inactive
+{
+    border-color: #000000;
+}
+
+.feature-scroll h2 {
+    justify-self: left;
 }

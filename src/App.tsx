@@ -1,4 +1,4 @@
-import {type Dispatch, useState} from "react";
+import {useState} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 
@@ -64,10 +64,9 @@ function App()
       <section className="feature-scroll">
         <h2>Feature Scroll</h2>
         <menu>
-          <FeatureButton clickHandler={() => handleFeatureSelect("Sheets")}>Sheets</FeatureButton>
-          <FeatureButton clickHandler={() => handleFeatureSelect("Panes")}>Panes</FeatureButton>
-          <FeatureButton clickHandler={() => handleFeatureSelect("OmniContext")}>OmniContext</FeatureButton>
-          <FeatureButton clickHandler={() => handleFeatureSelect("Plugins")}>Plugins</FeatureButton>
+          {(Object.keys(FEATURE_CONTENT) as featureType[]).map(key => (
+            <FeatureButton isActive={featureSelectedType === key} clickHandler={() => handleFeatureSelect(key)}>{key}</FeatureButton>
+          ))}
         </menu>
         <div>
           <h3>

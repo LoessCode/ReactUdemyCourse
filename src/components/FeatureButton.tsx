@@ -3,14 +3,15 @@ import type {ReactNode} from "react";
 interface FeatureButtonProps {
   children?: ReactNode;
   clickHandler?: () => void;
+  isActive?: boolean;
 }
 
 function FeatureButton({...props}: FeatureButtonProps)
 {
   return (
     <>
-      <li className="feature-button">
-        <button className = "feature-scroll" onClick={props.clickHandler}>
+      <li className="feature-scroll">
+        <button className ={"feature-button-" + (props.isActive ? "active" : "inactive")} onClick={props.clickHandler}>
           {props.children}
         </button>
       </li>
