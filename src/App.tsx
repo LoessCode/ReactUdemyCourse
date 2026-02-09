@@ -1,15 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {useState} from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./styles/App.css";
 
 
-function Card()
+interface CardProps
+{
+  txt?: string;
+}
+
+function Card({txt}: CardProps)
 {
   return (
     <>
       <div className="cardCustom">
-        This is a Card.
+        {txt}
       </div>
     </>
   );
@@ -20,30 +25,31 @@ function CardContainer()
   return (
     <>
       <div className="cardContainer">
-        <Card />
-        <Card />
-        <Card />
+        <Card txt="This is a card"/>
+        <Card txt="This is the second card" />
+        <Card txt="This is the third card"/>
       </div>
     </>
-  )
+  );
 }
 
-function App() {
+function App()
+{
   const [count, setCount] = useState(0);
 
   return (
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo" alt="Vite logo"/>
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className="logo react" alt="React logo"/>
         </a>
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setCount(count => count + 1)}>
           count is {count}
         </button>
         <p>
@@ -57,7 +63,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
