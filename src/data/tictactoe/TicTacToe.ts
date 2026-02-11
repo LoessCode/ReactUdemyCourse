@@ -19,13 +19,16 @@ class GameGrid
     return this.cells[index];
   }
 
-  setCell(index: number, value: squareValue): void
+  setCell(index: number, value: squareValue)
   {
     if (index > 8)
     {
       throw new Error("Cell index out of range");
     }
-    this.cells[index] = value;
+    const newGrid = new GameGrid();
+    newGrid.cells = [...this.cells];
+    newGrid.cells[index] = value;
+    return newGrid;
   }
 
   checkWin(): squareValue
@@ -70,11 +73,6 @@ class GameGrid
     if (this.cells[6] !== v) result = "Z";
 
     return result;
-  }
-
-  clear(): void
-  {
-    this.cells = Array<squareValue>(9).fill("Z");
   }
 
 }
