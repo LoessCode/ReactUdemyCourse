@@ -24,20 +24,21 @@
     width: 25rem;
     height: 10rem;
 
-    margin-bottom: 5rem;
-
     background: #242424;
 
     border-radius: 3rem;
 
     box-shadow: inset 0.6rem 0.6rem 2rem #141414,
     inset -0.6rem -0.6rem 2rem #343434;
+
+    transition: opacity 200ms ease, background-position 200ms ease;
 }
 
 button.game-square
 {
     appearance: none;
     border: none;
+
 
     width: 7rem;
     height: 7rem;
@@ -47,21 +48,19 @@ button.game-square
     border-radius: 50%;
 
     outline: none;
+
+    transition: opacity 200ms ease, background-position 200ms ease;
 }
 
-button.game-square:hover
+.fade
 {
-    outline: none;
+    opacity: 30%;
 }
 
 button.game-score
 {
     appearance: none;
     border: none;
-    outline: none;
-}
-button.game-square:hover
-{
     outline: none;
 }
 
@@ -75,11 +74,20 @@ button.game-square:hover
 #ff5656
  */
 
+.Z, .X, .O
+{
+    background-size: 200% 200%;
+    background-position: 0 0, 0 0;
+}
 
+.Z:hover, .X:hover, .O:hover
+{
+    background-position: 100% 100%, 0 0;
+}
 
 .Z
 {
-    background: linear-gradient(145deg, #494949, #171717);
+    background-image: linear-gradient(145deg, #494949, #2d2d2d, #2d2d2d, #494949);
 
     box-shadow:  0.4rem 0.4rem 0.5rem #141414,
     -0.4rem -0.4rem 0.5rem #343434;
@@ -87,7 +95,7 @@ button.game-square:hover
 
 .X
 {
-    background: linear-gradient(145deg, #5f77ea, #181e3d);
+    background-image: linear-gradient(145deg, #5f77ea, #364179, #364179, #5f77ea);
 
     box-shadow:  0.4rem 0.4rem 0.5rem #141414,
     -0.4rem -0.4rem 0.5rem #343434;
@@ -95,20 +103,18 @@ button.game-square:hover
 
 .O
 {
-    background: linear-gradient(145deg, #d05858, #381818);
+    background-image: linear-gradient(145deg, #d05858, #5d2f2f, #5d2f2f, #d05858);
 
     box-shadow:  0.4rem 0.4rem 0.5rem #141414,
     -0.4rem -0.4rem 0.5rem #343434;
 }
 
-.O.W
+p.W
 {
-    box-shadow:  -0.4rem -0.4rem 0.5rem #d05858,
-    0.4rem 0.4rem 0.5rem #381818;
+    color: #c2c2c2;
+    font-size: 3.4rem;
+    font-weight: 1200;
+    letter-spacing: 0.05em;
+    margin: 1rem;
 }
 
-.X.W
-{
-    box-shadow:  -0.4rem -0.4rem 0.5rem #5f77ea,
-    0.4rem 0.4rem 0.5rem #181e3d;
-}

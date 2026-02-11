@@ -1,0 +1,145 @@
+.login-box
+{
+    width: 30rem;
+    height: 25rem;
+
+    background: #2a2a2a;
+    border-radius: 2rem;
+
+    box-shadow: 0.3rem 0.3rem 1rem #131313,
+    -0.3rem -0.3rem 1rem #494949;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.login-fields
+{
+    width: 16rem;
+    height: 23rem;
+
+    background: #2d2d2d;
+    border-radius: 2rem;
+
+    box-shadow: 0.3rem 0.3rem 1rem #131313,
+    -0.3rem -0.3rem 1rem #494949;
+
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    margin-left: 1rem;
+}
+
+.login-buttons
+{
+    width: 10rem;
+    height: 23rem;
+
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    margin-left: 1.5rem;
+}
+
+input
+{
+    width: 10rem;
+    height: 2rem;
+
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+
+    box-shadow: 0.3rem 0.3rem 1rem #131313 inset,
+    -0.3rem -0.3rem 1rem #494949 inset;
+
+    margin: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.4rem;
+
+    color: #656565;
+    font-weight: bold;
+}
+
+input::placeholder
+{
+    color: #656565;
+    font-weight: bold;
+}
+
+.login-buttons h2
+{
+    color: #656565;
+    font-weight: bold;
+}
+
+.login-fields p
+{
+    color: #656565;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.login-buttons button
+{
+
+    width: 10rem;
+    height: 4rem;
+
+    border-radius: 2rem;
+    background: #2d2d2d;
+
+    box-shadow: 0.3rem 0.3rem 1rem #131313,
+    -0.3rem -0.3rem 1rem #494949;
+
+    margin: 1rem 2rem;
+
+    outline: none;
+    border: none;
+
+    color: #656565;
+    font-weight: bold;
+
+    transition: font-size 100ms ease, background-color 100ms;
+}
+
+.login-buttons button:hover
+{
+    background: #2d2d2d;
+
+    box-shadow:
+    0.2rem 0.2rem 1rem #131313,
+    -0.2rem -0.2rem 1rem #494949,
+    0.2rem 0.2rem 1rem #131313 inset,
+    -0.2rem -0.2rem 1rem #494949 inset;
+}
+
+.login-buttons button:active
+{
+    background: #2a2a2a;
+
+    box-shadow:
+            0.3rem 0.3rem 1rem #131313 inset,
+            -0.3rem -0.3rem 1rem #494949 inset;
+
+}
+
+button span
+{
+    display: inline-block;
+}
+
+button:hover span
+{
+    transform: scale(95%);
+}
+
+button:active span
+{
+    transform: scale(90%);
+}
